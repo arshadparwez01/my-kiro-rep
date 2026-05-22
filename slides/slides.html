@@ -683,6 +683,85 @@
     margin-bottom: 6px;
     display: block;
   }
+
+  /* Integration grid (Beyond SAP slide) */
+  .integration-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .integration-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 14px;
+    padding: 22px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+  }
+  .integration-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 36px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--orange), var(--yellow));
+  }
+  .ic-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255,107,0,0.20), rgba(255,184,0,0.10));
+    border: 1px solid rgba(255,107,0,0.35);
+    display: grid;
+    place-items: center;
+    color: var(--orange);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  .ic-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+  }
+  .ic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ic-pill {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    color: var(--text-soft);
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.2px;
+  }
+  .integration-footnote {
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--text-soft);
+    letter-spacing: 0.3px;
+  }
+  .integration-footnote strong {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
 </style>
 </head>
 <body>
@@ -691,7 +770,7 @@
 <section class="slide" id="s1">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>01</span> / 10</div>
+    <div class="slide-num"><span>01</span> / 11</div>
   </div>
 
   <div style="flex:1; display:flex; flex-direction:column; justify-content:center; position:relative; z-index:2;">
@@ -708,7 +787,7 @@
       <br/><br/>
       Let&rsquo;s set the record straight.
     </p>
-    <div class="title-tag">SWIPE  &rarr;  10 SLIDES, 2 MINUTES</div>
+    <div class="title-tag">SWIPE  &rarr;  11 SLIDES, 2 MINUTES</div>
   </div>
 
   <div class="bottom-bar">
@@ -722,7 +801,7 @@
 <section class="slide" id="s2">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>02</span> / 10</div>
+    <div class="slide-num"><span>02</span> / 11</div>
   </div>
 
   <div class="eyebrow">The Misconception</div>
@@ -776,7 +855,7 @@
 <section class="slide" id="s3">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>03</span> / 10</div>
+    <div class="slide-num"><span>03</span> / 11</div>
   </div>
 
   <div class="eyebrow">So, properly defined &mdash;</div>
@@ -824,7 +903,7 @@
 <section class="slide" id="s4">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>04</span> / 10</div>
+    <div class="slide-num"><span>04</span> / 11</div>
   </div>
 
   <div class="eyebrow">The Problem</div>
@@ -865,7 +944,7 @@
 <section class="slide" id="s5">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>05</span> / 10</div>
+    <div class="slide-num"><span>05</span> / 11</div>
   </div>
 
   <div class="eyebrow">Core Capabilities &mdash; Part 1</div>
@@ -916,7 +995,7 @@
 <section class="slide" id="s6">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>06</span> / 10</div>
+    <div class="slide-num"><span>06</span> / 11</div>
   </div>
 
   <div class="eyebrow">Core Capabilities &mdash; Part 2</div>
@@ -967,7 +1046,7 @@
 <section class="slide" id="s7">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>07</span> / 10</div>
+    <div class="slide-num"><span>07</span> / 11</div>
   </div>
 
   <div class="eyebrow">Spotlight Use-Case</div>
@@ -1010,7 +1089,7 @@
 <section class="slide" id="s8">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>08</span> / 10</div>
+    <div class="slide-num"><span>08</span> / 11</div>
   </div>
 
   <div class="eyebrow">Control-M for SAP</div>
@@ -1051,11 +1130,127 @@
   </div>
 </section>
 
-<!-- ============== SLIDE 8: BUSINESS VALUE ============== -->
+<!-- ============== SLIDE 9: BEYOND SAP - INTEGRATION BREADTH ============== -->
 <section class="slide" id="s9">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>09</span> / 10</div>
+    <div class="slide-num"><span>09</span> / 11</div>
+  </div>
+
+  <div class="eyebrow">Beyond SAP</div>
+  <h2 class="slide-title">What else can it<br/><span class="accent-grad">orchestrate?</span></h2>
+  <p class="lede" style="max-width: 880px; margin-top:18px;">
+    SAP is just one neighbourhood. Control-M&rsquo;s real power is that the
+    <em>same</em> workflow can chain together everything below &mdash; in one place.
+  </p>
+
+  <div class="integration-grid">
+    <div class="integration-card">
+      <div class="ic-icon">&#9729;</div>
+      <div class="ic-title">Cloud Platforms</div>
+      <div class="ic-list">
+        <span class="ic-pill">AWS</span>
+        <span class="ic-pill">Azure</span>
+        <span class="ic-pill">GCP</span>
+        <span class="ic-pill">OCI</span>
+      </div>
+    </div>
+
+    <div class="integration-card">
+      <div class="ic-icon">&#9650;</div>
+      <div class="ic-title">Data &amp; Analytics</div>
+      <div class="ic-list">
+        <span class="ic-pill">Snowflake</span>
+        <span class="ic-pill">Databricks</span>
+        <span class="ic-pill">BigQuery</span>
+        <span class="ic-pill">Redshift</span>
+      </div>
+    </div>
+
+    <div class="integration-card">
+      <div class="ic-icon">&#10566;</div>
+      <div class="ic-title">ETL / Data Integration</div>
+      <div class="ic-list">
+        <span class="ic-pill">Informatica</span>
+        <span class="ic-pill">Talend</span>
+        <span class="ic-pill">Airflow</span>
+        <span class="ic-pill">dbt</span>
+      </div>
+    </div>
+
+    <div class="integration-card">
+      <div class="ic-icon">&#9670;</div>
+      <div class="ic-title">Streaming &amp; Big Data</div>
+      <div class="ic-list">
+        <span class="ic-pill">Kafka</span>
+        <span class="ic-pill">Spark</span>
+        <span class="ic-pill">Hadoop</span>
+        <span class="ic-pill">Confluent</span>
+      </div>
+    </div>
+
+    <div class="integration-card">
+      <div class="ic-icon">&#9678;</div>
+      <div class="ic-title">Containers &amp; DevOps</div>
+      <div class="ic-list">
+        <span class="ic-pill">Kubernetes</span>
+        <span class="ic-pill">OpenShift</span>
+        <span class="ic-pill">Jenkins</span>
+        <span class="ic-pill">Ansible</span>
+      </div>
+    </div>
+
+    <div class="integration-card">
+      <div class="ic-icon">&#9646;</div>
+      <div class="ic-title">Enterprise Apps</div>
+      <div class="ic-list">
+        <span class="ic-pill">Oracle EBS</span>
+        <span class="ic-pill">PeopleSoft</span>
+        <span class="ic-pill">Salesforce</span>
+        <span class="ic-pill">MS Dynamics</span>
+      </div>
+    </div>
+
+    <div class="integration-card">
+      <div class="ic-icon">&#9863;</div>
+      <div class="ic-title">Databases &amp; Mainframe</div>
+      <div class="ic-list">
+        <span class="ic-pill">Oracle</span>
+        <span class="ic-pill">SQL Server</span>
+        <span class="ic-pill">DB2</span>
+        <span class="ic-pill">z/OS</span>
+      </div>
+    </div>
+
+    <div class="integration-card">
+      <div class="ic-icon">&#8644;</div>
+      <div class="ic-title">ITSM &amp; File Transfer</div>
+      <div class="ic-list">
+        <span class="ic-pill">ServiceNow</span>
+        <span class="ic-pill">Jira</span>
+        <span class="ic-pill">MFT</span>
+        <span class="ic-pill">SFTP / S3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="integration-footnote">
+    &hellip; and <strong>150+ more</strong> out-of-the-box integrations.
+    One platform. One audit trail. One SLA view.
+  </div>
+
+  <div class="bottom-bar">
+    <span>By Arshad Parwez</span>
+    <div class="progress-track"><div class="progress-fill" style="width:82%"></div></div>
+    <span>09 / 11</span>
+  </div>
+</section>
+
+<!-- ============== SLIDE 8: BUSINESS VALUE ============== -->
+<section class="slide" id="s10">
+  <div class="top-bar">
+    <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
+    <div class="slide-num"><span>10</span> / 11</div>
   </div>
 
   <div class="eyebrow">Business Value</div>
@@ -1111,10 +1306,10 @@
 </section>
 
 <!-- ============== SLIDE 9: CLOSING ============== -->
-<section class="slide" id="s10">
+<section class="slide" id="s11">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>10</span> / 10</div>
+    <div class="slide-num"><span>11</span> / 11</div>
   </div>
 
   <div class="closing-center">
