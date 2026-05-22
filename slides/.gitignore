@@ -1,0 +1,4 @@
+node_modules/
+nsspkg/
+slides-pdf.html
+package-lock.json

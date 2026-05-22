@@ -1,0 +1,14 @@
+{
+  "name": "control-m-linkedin-carousel",
+  "version": "1.0.0",
+  "description": "BMC-styled LinkedIn carousel about Control-M orchestration & SAP",
+  "private": true,
+  "scripts": {
+    "render": "node render.js",
+    "pdf": "node render-pdf.js",
+    "all": "node render.js && node render-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^25.0.4"
+  }
+}
