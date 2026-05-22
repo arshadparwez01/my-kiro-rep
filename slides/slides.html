@@ -550,6 +550,139 @@
     z-index: 1;
     opacity: 0.6;
   }
+
+  /* Myth vs Reality slide */
+  .myth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .myth-col {
+    padding: 36px 32px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .myth-col.myth {
+    background: rgba(255, 80, 80, 0.06);
+    border: 1px solid rgba(255, 80, 80, 0.25);
+  }
+
+  .myth-col.reality {
+    background: linear-gradient(135deg, rgba(255,107,0,0.16), rgba(255,184,0,0.06));
+    border: 1px solid rgba(255,107,0,0.45);
+  }
+
+  .myth-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .myth-col.myth .myth-tag {
+    background: rgba(255,80,80,0.18);
+    color: #FF8A8A;
+  }
+  .myth-col.reality .myth-tag {
+    background: rgba(255,107,0,0.20);
+    color: var(--orange);
+  }
+
+  .myth-headline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+  }
+  .myth-col.myth .myth-headline { color: #fff; opacity: 0.85; }
+  .myth-col.myth .myth-headline s { opacity: 0.55; }
+
+  .myth-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .myth-list li {
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--text-soft);
+    padding-left: 22px;
+    position: relative;
+  }
+  .myth-col.myth .myth-list li::before {
+    content: "\00d7";
+    position: absolute;
+    left: 0; top: -2px;
+    color: #FF8A8A;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .myth-col.reality .myth-list li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 9px;
+    width: 10px; height: 10px;
+    background: var(--orange);
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+
+  /* Field-note callout (personal insight) */
+  .field-note {
+    margin-top: 30px;
+    padding: 26px 30px;
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, rgba(255,107,0,0.10), rgba(255,184,0,0.04)),
+      var(--bg-card);
+    border: 1px solid rgba(255,107,0,0.30);
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+  }
+
+  .field-note-mark {
+    flex-shrink: 0;
+    width: 50px; height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--orange), var(--yellow));
+    color: #0A0E1A;
+    display: grid;
+    place-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .field-note-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--text-soft);
+    font-style: italic;
+  }
+  .field-note-text strong { color: #fff; font-style: normal; font-weight: 600; }
+  .field-note-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+  }
 </style>
 </head>
 <body>
@@ -558,45 +691,101 @@
 <section class="slide" id="s1">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>01</span> / 09</div>
+    <div class="slide-num"><span>01</span> / 10</div>
   </div>
 
   <div style="flex:1; display:flex; flex-direction:column; justify-content:center; position:relative; z-index:2;">
-    <div class="eyebrow">Enterprise Orchestration</div>
+    <div class="eyebrow">A Myth Worth Busting</div>
     <h1 class="slide-title">
-      The engine<br/>
-      behind every<br/>
-      <span class="accent-grad">mission-critical</span><br/>
-      workflow.
+      &ldquo;Control-M?<br/>
+      Isn&rsquo;t that<br/>
+      just a<br/>
+      <span class="accent-grad">monitoring tool?</span>&rdquo;
     </h1>
-    <p class="lede" style="max-width: 720px;">
-      A no-fluff guide to Control-M &mdash; what it is, why it matters,
-      and how it powers SAP at enterprise scale.
+    <p class="lede" style="max-width: 760px;">
+      I&rsquo;ve heard this from senior leaders at multiple organizations.
+      And every time, it has cost the business more than they realize.
+      <br/><br/>
+      Let&rsquo;s set the record straight.
     </p>
-    <div class="title-tag">SWIPE  &rarr;  9 SLIDES, 90 SECONDS</div>
+    <div class="title-tag">SWIPE  &rarr;  10 SLIDES, 2 MINUTES</div>
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  ORCHESTRATION 101</span>
-    <div class="progress-track"><div class="progress-fill" style="width:11%"></div></div>
-    <span>01</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
+    <span>01 / 10</span>
   </div>
 </section>
 
-<!-- ============== SLIDE 2: WHAT IS CONTROL-M ============== -->
+<!-- ============== SLIDE 2: MYTH vs REALITY ============== -->
 <section class="slide" id="s2">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>02</span> / 09</div>
+    <div class="slide-num"><span>02</span> / 10</div>
   </div>
 
-  <div class="eyebrow">Chapter 01 &mdash; The Basics</div>
-  <h2 class="slide-title">So... what <span class="accent-grad">is</span><br/>Control-M?</h2>
+  <div class="eyebrow">The Misconception</div>
+  <h2 class="slide-title">Most leadership teams<br/>see <span style="opacity:0.55; text-decoration: line-through; text-decoration-color: rgba(255,107,0,0.6);">10%</span> of what<br/>Control-M actually <span class="accent-grad">does.</span></h2>
+
+  <div class="myth-grid">
+    <div class="myth-col myth">
+      <div class="myth-tag">The Myth</div>
+      <div class="myth-headline">&ldquo;It&rsquo;s the <s>monitoring tool</s> that pings us when a job fails.&rdquo;</div>
+      <ul class="myth-list">
+        <li>Treated as a passive dashboard</li>
+        <li>Owned by &ldquo;the batch team&rdquo;</li>
+        <li>Seen as legacy infrastructure</li>
+        <li>Renewed reluctantly, never invested in</li>
+      </ul>
+    </div>
+
+    <div class="myth-col reality">
+      <div class="myth-tag">The Reality</div>
+      <div class="myth-headline" style="color:#fff;">It&rsquo;s the <span class="accent-grad">orchestration backbone</span> of the business.</div>
+      <ul class="myth-list">
+        <li>Schedules, executes &amp; coordinates workflows</li>
+        <li>Manages dependencies across SAP, cloud, data, MFT</li>
+        <li>Predicts SLA breaches <em>before</em> they happen</li>
+        <li>Provides audit, governance &amp; self-service for devs</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="field-note">
+    <div class="field-note-mark">&ldquo;</div>
+    <div>
+      <span class="field-note-label">From the field</span>
+      <div class="field-note-text">
+        Across <strong>multiple organizations</strong>, I&rsquo;ve seen senior leaders
+        label Control-M as &ldquo;just monitoring&rdquo; &mdash; and then wonder why
+        month-end close keeps slipping. The tool isn&rsquo;t the problem. The
+        understanding of it is.
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:20%"></div></div>
+    <span>02 / 10</span>
+  </div>
+</section>
+
+<!-- ============== SLIDE 3: WHAT IS CONTROL-M ============== -->
+<section class="slide" id="s3">
+  <div class="top-bar">
+    <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
+    <div class="slide-num"><span>03</span> / 10</div>
+  </div>
+
+  <div class="eyebrow">So, properly defined &mdash;</div>
+  <h2 class="slide-title">Control-M is an<br/><span class="accent-grad">orchestration platform.</span></h2>
   <p class="lede" style="max-width: 880px;">
-    Control-M is an enterprise-grade <strong style="color:#fff">application and data
-    workflow orchestration</strong> platform from BMC. Think of it as the
-    conductor that makes thousands of jobs across your stack run on time, in order,
-    and without surprises.
+    From BMC. Enterprise-grade. It coordinates <strong style="color:#fff">application and
+    data workflows</strong> across your entire stack &mdash; making thousands of jobs
+    run on time, in the right order, with full visibility. Monitoring is one
+    feature. Not the product.
   </p>
 
   <div class="stats-row">
@@ -614,7 +803,7 @@
     </div>
   </div>
 
-  <div style="margin-top:40px; padding: 26px 30px; border-radius: 16px; background: rgba(255,107,0,0.08); border-left: 4px solid var(--orange);">
+  <div style="margin-top:36px; padding: 26px 30px; border-radius: 16px; background: rgba(255,107,0,0.08); border-left: 4px solid var(--orange);">
     <div style="font-family:'Space Grotesk', sans-serif; font-size:20px; font-weight:600; color: #fff;">
       In one line:
     </div>
@@ -625,17 +814,17 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  ORCHESTRATION 101</span>
-    <div class="progress-track"><div class="progress-fill" style="width:22%"></div></div>
-    <span>02</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:30%"></div></div>
+    <span>03 / 10</span>
   </div>
 </section>
 
 <!-- ============== SLIDE 3: THE PROBLEM ============== -->
-<section class="slide" id="s3">
+<section class="slide" id="s4">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>03</span> / 09</div>
+    <div class="slide-num"><span>04</span> / 10</div>
   </div>
 
   <div class="eyebrow">The Problem</div>
@@ -666,17 +855,17 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  ORCHESTRATION 101</span>
-    <div class="progress-track"><div class="progress-fill" style="width:33%"></div></div>
-    <span>03</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:40%"></div></div>
+    <span>04 / 10</span>
   </div>
 </section>
 
 <!-- ============== SLIDE 4: KEY FEATURES PART 1 ============== -->
-<section class="slide" id="s4">
+<section class="slide" id="s5">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>04</span> / 09</div>
+    <div class="slide-num"><span>05</span> / 10</div>
   </div>
 
   <div class="eyebrow">Core Capabilities &mdash; Part 1</div>
@@ -717,17 +906,17 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  ORCHESTRATION 101</span>
-    <div class="progress-track"><div class="progress-fill" style="width:44%"></div></div>
-    <span>04</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:50%"></div></div>
+    <span>05 / 10</span>
   </div>
 </section>
 
 <!-- ============== SLIDE 5: KEY FEATURES PART 2 ============== -->
-<section class="slide" id="s5">
+<section class="slide" id="s6">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>05</span> / 09</div>
+    <div class="slide-num"><span>06</span> / 10</div>
   </div>
 
   <div class="eyebrow">Core Capabilities &mdash; Part 2</div>
@@ -768,17 +957,17 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  ORCHESTRATION 101</span>
-    <div class="progress-track"><div class="progress-fill" style="width:55%"></div></div>
-    <span>05</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:60%"></div></div>
+    <span>06 / 10</span>
   </div>
 </section>
 
 <!-- ============== SLIDE 6: SAP SPOTLIGHT ============== -->
-<section class="slide" id="s6">
+<section class="slide" id="s7">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>06</span> / 09</div>
+    <div class="slide-num"><span>07</span> / 10</div>
   </div>
 
   <div class="eyebrow">Spotlight Use-Case</div>
@@ -811,17 +1000,17 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  SAP USE-CASE</span>
-    <div class="progress-track"><div class="progress-fill" style="width:66%"></div></div>
-    <span>06</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:70%"></div></div>
+    <span>07 / 10</span>
   </div>
 </section>
 
 <!-- ============== SLIDE 7: SAP INTEGRATION DETAILS ============== -->
-<section class="slide" id="s7">
+<section class="slide" id="s8">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>07</span> / 09</div>
+    <div class="slide-num"><span>08</span> / 10</div>
   </div>
 
   <div class="eyebrow">Control-M for SAP</div>
@@ -856,17 +1045,17 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  SAP USE-CASE</span>
-    <div class="progress-track"><div class="progress-fill" style="width:77%"></div></div>
-    <span>07</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:80%"></div></div>
+    <span>08 / 10</span>
   </div>
 </section>
 
 <!-- ============== SLIDE 8: BUSINESS VALUE ============== -->
-<section class="slide" id="s8">
+<section class="slide" id="s9">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>08</span> / 09</div>
+    <div class="slide-num"><span>09</span> / 10</div>
   </div>
 
   <div class="eyebrow">Business Value</div>
@@ -915,17 +1104,17 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  BUSINESS VALUE</span>
-    <div class="progress-track"><div class="progress-fill" style="width:88%"></div></div>
-    <span>08</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
+    <div class="progress-track"><div class="progress-fill" style="width:90%"></div></div>
+    <span>09 / 10</span>
   </div>
 </section>
 
 <!-- ============== SLIDE 9: CLOSING ============== -->
-<section class="slide" id="s9">
+<section class="slide" id="s10">
   <div class="top-bar">
     <div class="brand"><div class="brand-mark">C</div>Control-M Insights</div>
-    <div class="slide-num"><span>09</span> / 09</div>
+    <div class="slide-num"><span>10</span> / 10</div>
   </div>
 
   <div class="closing-center">
@@ -957,9 +1146,9 @@
   </div>
 
   <div class="bottom-bar">
-    <span>CONTROL-M  /  THE END  &mdash;  THANK YOU</span>
+    <span>By Arshad Parwez   &middot;   LinkedIn</span>
     <div class="progress-track"><div class="progress-fill" style="width:100%"></div></div>
-    <span>09</span>
+    <span>10 / 10</span>
   </div>
 </section>
 
