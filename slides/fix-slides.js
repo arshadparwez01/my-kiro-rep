@@ -7,7 +7,7 @@ const path = require('path');
 const file = path.join(__dirname, 'slides.html');
 let html = fs.readFileSync(file, 'utf8');
 
-const BYLINE = 'By Arshad Parwez   &middot;   LinkedIn';
+const BYLINE = 'By Arshad Parwez';
 
 // Walk every <section class="slide" id="..."> in document order, re-stamping
 // the id, the top-bar slide-num, the bottom-bar slide-num, the progress
