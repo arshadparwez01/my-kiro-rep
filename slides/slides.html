@@ -43,6 +43,9 @@
   .brand-mark { width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%); display: grid; place-items: center; color: #0A0E1A; font-weight: 900; font-size: 18px; }
   .slide-num { font-family: 'Space Grotesk', sans-serif; font-size: 16px; color: var(--text-muted); letter-spacing: 2px; }
   .slide-num span { color: var(--orange); font-weight: 700; }
+  /* Page numbers removed per request */
+  .slide-num { display: none !important; }
+  .bottom-bar > span:last-child { display: none !important; }
   .bottom-bar { position: absolute; bottom: 50px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: center; z-index: 2; font-size: 14px; color: var(--text-muted); letter-spacing: 1.5px; }
   .progress-track { flex: 1; height: 3px; margin: 0 24px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; position: relative; }
   .progress-fill { position: absolute; top: 0; left: 0; bottom: 0; background: linear-gradient(90deg, var(--orange), var(--yellow)); border-radius: 2px; }
